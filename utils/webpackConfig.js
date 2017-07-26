@@ -4,11 +4,11 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 let webpackConfig = {
     entry: {
-        home: './src/entry.js',
+        app: ['./src/entry.js']
     },
     output: {
         path: path.join(__dirname, '../build'),
-        filename: "js/[name].js"
+        filename: "js/bundle.js"
     },
     devServer: {
         port: 8080,
