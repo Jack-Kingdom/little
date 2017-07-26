@@ -1,17 +1,13 @@
 import path from 'path'
-import webpack from 'webpack'
-import WebpackDevServer from 'webpack-dev-server'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import UglifyJSPlugin from 'uglifyjs-webpack-plugin'
-import config from '../src/config'
 
 let webpackConfig = {
     entry: {
-        home: './src/frontend/entry.js',
+        home: './src/entry.js',
     },
     output: {
-        path: path.join(config.appRoot, 'build/frontend'),
+        path: path.join(__dirname, '../build'),
         filename: "js/[name].js"
     },
     devServer: {
@@ -61,15 +57,12 @@ let webpackConfig = {
     plugins: [
         // home page
         new HtmlWebpackPlugin({
-            template: 'src/frontend/index.html',
+            template: 'src/index.html',
             filename: 'index.html',
         }),
         // combine css file
         new ExtractTextPlugin("css/[name].css"),
     ]
 };
-
-// minimize and compress javascript
-if (!config.debug) webpackConfig.plugins.push(new UglifyJSPlugin());
 
 export default webpackConfig;

@@ -1,11 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import schema from '../backend/api/graphql/schema'
-import { printSchema } from 'graphql'
+import fetchSchema from 'fetch-graphql-schema'
+import config from '../config'
 
-const schemaPath = path.resolve(__dirname, '../../src/backend/api/graphql/schema.graphqls');
-
-fs.writeFileSync(schemaPath, printSchema(schema));
+const schemaPath = path.resolve(__dirname, '../graphql.schema.json');
+fetchSchema(config.backend_url + '/graphql')
+    .then(schemaJSON => fs.writeFileSync(schemaPath, schemaJSON));
 
 console.log('Wrote ' + schemaPath);
 

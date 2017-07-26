@@ -4,11 +4,10 @@
   "description": "my own blog app",
   "main": "src/backend/index.js",
   "scripts": {
-    "dev": "babel-node ./utils/webpackDev.js",
-    "build": "babel-node  ./src/utils/webpackBuild.js",
-    "update-schema": "babel-node src/utils/updateSchema.js",
-    "schema-json": "babel-node src/utils/schemaJson.js",
-    "relay": "relay-compiler --src ./src/frontend --schema ./graphql.schema.json --watch"
+    "dev": "babel-node utils/webpackDev.js",
+    "build": "babel-node  utils/webpackBuild.js",
+    "update-schema": "babel-node utils/updateSchema.js",
+    "relay": "relay-compiler --src ./src --schema ./graphql.schema.json --watch"
   },
   "author": "Jack",
   "license": "ISC",
@@ -26,6 +25,7 @@
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "extract-text-webpack-plugin": "^2.1.2",
+    "fetch-graphql-schema": "^0.2.1",
     "file-loader": "^0.11.2",
     "graphql": "^0.10.5",
     "html-webpack-plugin": "^2.29.0",
