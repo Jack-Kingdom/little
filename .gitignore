@@ -1,0 +1,11 @@
+# IDE tmp file
+.idea
+
+# installed package
+node_modules
+
+# yarn & npm log file
+yarn-error.log
+yarn.lock
+
+# graphql schema file
