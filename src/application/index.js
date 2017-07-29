@@ -9,20 +9,19 @@ import Admin from './admin'
 
 class App extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
     }
+
     render() {
         return (
-            /*
             <BrowserRouter>
                 <div className="site-wrapper">
-                    <Route exact path="/" component={ Home }/>
-                    <Route exact path="/admin" component={ Admin }/>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/admin" component={Admin}/>
                 </div>
             </BrowserRouter>
-            */
-            Home
-        );
+        )
     }
 }
+
 export default App;

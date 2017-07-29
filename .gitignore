@@ -10,6 +10,7 @@ yarn.lock
 
 # graphql schema file
 graphql.schema.json
+__generated__
 
 # build folder
 build

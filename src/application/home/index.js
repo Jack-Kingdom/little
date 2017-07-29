@@ -3,64 +3,45 @@
  */
 
 import React from 'react';
+import {QueryRenderer, graphql} from 'react-relay';
+import modernEnvironment from '../env'
 import Sidebar from './sidebar'
 import ArticleList from './article/articleList'
 
-import {
-    QueryRenderer,
-    graphql,
-} from 'react-relay';
-
-import {
-    Environment,
-    Network,
-    RecordSource,
-    Store,
-} from 'relay-runtime';
-
-function fetchQuery(operation, variables,) {
-    return fetch('/graphql', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            query: operation.text,
-            variables,
-        }),
-    }).then(response => {
-        return response.json();
-    });
-}
-
-const modernEnvironment = new Environment({
-    network: Network.create(fetchQuery),
-    store: new Store(new RecordSource()),
-});
-
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
-            <ArticleList/>
+            <QueryRenderer
+                environment={modernEnvironment}
+                query={
+                    graphql`
+                      query homeQuery {
+                        articles{
+                            ...articleItem
+                        }
+                      }
+                `
+                }
+                render={({error, props}) => {
+                    if (error) {
+                        return <div>{error.message}</div>
+                    } else if (props) {
+                        console.log(props.articles);
+                        return (
+                            <ArticleList articles={props.articles}/>
+                        );
+                    } else {
+                        return <div>Loading</div>
+                    }
+                }}
+            />
         )
     }
 }
 
 
-// export default Home;
-
-export default <QueryRenderer
-    environment={modernEnvironment}
-    query={graphql`
-      query homeQuery {
-        articles{
-            ...articleList_viewer
-        }
-      }
-    `}
-    variables={{}}
-    render={({error, props}) => {
-        if(error) throw error;
-        console.log(props);
-        return <ArticleList viewer={props}/>
-    }}/>
+export default Home;

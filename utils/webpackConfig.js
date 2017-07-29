@@ -49,10 +49,10 @@ let webpackConfig = {
         ]
     },
     externals: {
-        'react': 'React',
-        'react-dom': 'ReactDOM',
-        'react-router-dom': 'ReactRouterDOM',
-        'katex': 'Katex',
+        // 'react': 'React',
+        // 'react-dom': 'ReactDOM',
+        // 'react-router-dom': 'ReactRouterDOM',
+        // 'katex': 'Katex',
     },
     plugins: [
         // home page

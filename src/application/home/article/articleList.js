@@ -3,37 +3,21 @@
  */
 
 import React from 'react';
-import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay';
-import ArticleItem from './article-item'
+import ArticleItem from './articleItem'
 
 class ArticleList extends React.Component {
     constructor(props) {
         super(props);
-
-        // this.state = {
-        //     articles: props.data
-        // };
-        this.articles = props;
+        this.articles = props.articles;
     }
 
     render() {
-        console.log(this.articles);
         return (
             <div>
-                <ArticleItem/>
-                <ArticleItem/>
-                <ArticleItem/>
+                {this.articles.map((article) => <ArticleItem key={article.__id} data={article}/>)}
             </div>
         )
     }
 }
 
-
-export default createFragmentContainer(ArticleList, graphql`
-    fragment articleList_viewer on Article{
-        id
-        title
-        slug
-    }
-`)
-
+export default ArticleList;
