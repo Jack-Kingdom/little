@@ -19,13 +19,17 @@ class Home extends React.Component {
                 environment={modernEnvironment}
                 query={
                     graphql`
-                      query homeQuery {
-                        articles{
+                      query homeQuery($sort:String,$limit:Int) {
+                        articles(sort:$sort,limit:$limit){
                             ...articleItem
                         }
                       }
                 `
                 }
+                variables={{
+                    sort: "updatedAt",
+                    limit: 10,
+                }}
                 render={({error, props}) => {
                     if (error) {
                         return <div>{error.message}</div>
