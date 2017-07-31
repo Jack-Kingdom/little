@@ -9,8 +9,7 @@ class Media extends React.Component {
 
     render() {
         return (
-            <form method="post" enctype="multipart/form-data" action="/api/media/upload">
-                <input type="hidden" name="msgtype" value="2"/>
+            <form method="post" encType="multipart/form-data" action="/api/media/upload">
                 <input type="file" name="media"/>
                 <input type="submit" value="Upload"/>
             </form>
