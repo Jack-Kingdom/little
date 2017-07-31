@@ -6,6 +6,8 @@ import config from '../config'
 
 // add hot reload support
 webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/');
+// add source map support
+webpackConfig.devtool = 'inline-source-map';
 
 const options = {
     proxy: {
