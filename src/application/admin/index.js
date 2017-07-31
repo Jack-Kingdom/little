@@ -4,11 +4,12 @@
 
 import React from 'react';
 import Editor from './editor'
+import Media from './media'
 
 class Admin extends React.Component{
     render(){
         return(
-            <Editor/>
+            <Media/>
         )
     }
 }
