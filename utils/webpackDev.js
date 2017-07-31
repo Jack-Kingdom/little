@@ -11,7 +11,7 @@ webpackConfig.devtool = 'inline-source-map';
 
 const options = {
     proxy: {
-        "/graphql": config.backend_url,
+        "/api/graphql": config.backend_url,
     },
     watchOptions: {
         aggregateTimeout: 300,
