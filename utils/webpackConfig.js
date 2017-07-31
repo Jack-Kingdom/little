@@ -15,6 +15,7 @@ let webpackConfig = {
         hot: true,
         inline: true,
         stats: {colors: true},
+        historyApiFallback: true
     },
     module: {
         loaders: [

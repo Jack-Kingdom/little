@@ -28,11 +28,11 @@ class Sidebar extends React.Component {
 
                 <ul className="sidebar-buttons">
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/Categories">Categories</Link></li>
-                    <li><Link to="/Tags">Tags</Link></li>
-                    <li><Link to="/Archives">Archives</Link></li>
-                    <li><Link to="/Search">Search</Link></li>
-                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/categories">Categories</Link></li>
+                    <li><Link to="/tags">Tags</Link></li>
+                    <li><Link to="/archives">Archives</Link></li>
+                    <li><Link to="/search">Search</Link></li>
+                    <li><Link to="/about">About</Link></li>
                     <li><Link to="/admin">Admin</Link></li>
                 </ul>
 

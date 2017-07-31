@@ -34,9 +34,11 @@ class Home extends React.Component {
                     if (error) {
                         return <div>{error.message}</div>
                     } else if (props) {
-                        console.log(props.articles);
                         return (
-                            <ArticleList articles={props.articles}/>
+                            <div>
+                                <ArticleList articles={props.articles}/>
+                                <Sidebar/>
+                            </div>
                         );
                     } else {
                         return <div>Loading</div>

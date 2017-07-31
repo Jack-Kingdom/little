@@ -1,3 +1,16 @@
-/**
- * Created by Jack on 4/4/2017.
- */
+"use strict";
+
+import React from 'react';
+
+
+class articleDetail extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+
+    }
+}
+
+export default articleDetail;

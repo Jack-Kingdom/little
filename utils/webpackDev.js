@@ -8,7 +8,9 @@ import config from '../config'
 webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/');
 
 const options = {
-    proxy: {"**": config.backend_url},
+    proxy: {
+        "/graphql": config.backend_url,
+    },
     watchOptions: {
         aggregateTimeout: 300,
         poll: 1000
