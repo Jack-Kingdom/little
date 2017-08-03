@@ -43,5 +43,8 @@
     "url-loader": "^0.5.9",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
   }
 }
