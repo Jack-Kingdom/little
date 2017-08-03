@@ -17,6 +17,7 @@ const options = {
         aggregateTimeout: 300,
         poll: 1000
     },
+    historyApiFallback:true
 };
 
 const server = new WebpackDevServer(webpack(webpackConfig), options);
