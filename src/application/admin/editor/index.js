@@ -1,9 +1,6 @@
-/**
- * Created by Jack on 4/13/2017.
- */
+"use strict";
 
 import React from 'react';
-import Radium from 'radium'
 
 // import Katex from 'katex'
 
