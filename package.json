@@ -45,6 +45,6 @@
     "webpack-dev-server": "^2.6.1"
   },
   "devDependencies": {
-    "jshint": "^2.9.5"
+    "eslint": "^4.3.0"
   }
 }
