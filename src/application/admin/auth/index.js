@@ -28,6 +28,7 @@ class Auth extends React.Component {
             headers: {
                 'Content-Type': 'application/json'
             },
+            credentials: 'same-origin',
             method: 'post',
             body: data,
         })
