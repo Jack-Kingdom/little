@@ -35,7 +35,7 @@ class Home extends React.Component {
                         return <div>{error.message}</div>
                     } else if (props) {
                         return (
-                            <div>
+                            <div className="home-wrapper">
                                 <ArticleList articles={props.articles}/>
                                 <Sidebar/>
                             </div>
