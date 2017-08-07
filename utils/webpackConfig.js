@@ -8,7 +8,8 @@ let webpackConfig = {
     },
     output: {
         path: path.join(__dirname, '../build'),
-        filename: "js/bundle.js"
+        filename: "js/bundle.js",
+        publicPath: "/"
     },
     devServer: {
         port: 8080,
