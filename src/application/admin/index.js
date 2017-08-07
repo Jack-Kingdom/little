@@ -1,6 +1,4 @@
-/**
- * Created by Jack on 4/20/2017.
- */
+"use strict";
 
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';

@@ -1,12 +1,12 @@
-/**
- * Created by Jack on 4/20/2017.
- */
+"use strict";
 
 import React from 'react';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 import {QueryRenderer, graphql} from 'react-relay';
-import modernEnvironment from '../env'
-import Sidebar from './sidebar'
-import ArticleList from './article/articleList'
+import modernEnvironment from '../env';
+import Sidebar from './sidebar';
+import ArticleList from './article/articleList';
+import ArticleDetail from './article/articleDetail';
 
 class Home extends React.Component {
     constructor(props) {
@@ -23,8 +23,7 @@ class Home extends React.Component {
                         articles(sort:$sort,limit:$limit){
                             ...articleItem
                         }
-                      }
-                `
+                      }`
                 }
                 variables={{
                     sort: "updatedAt",
@@ -35,10 +34,14 @@ class Home extends React.Component {
                         return <div>{error.message}</div>
                     } else if (props) {
                         return (
-                            <div className="home-wrapper">
-                                <ArticleList articles={props.articles}/>
-                                <Sidebar/>
-                            </div>
+                            <BrowserRouter>
+                                <div className="home-wrapper">
+                                    <Route exact path="/" render={() => (<ArticleList articles={props.articles}/>)}/>
+                                    {/*<Route path="/article/:slug" render={() => (<ArticleDetail data={props.articles[0]}/>)}/>*/}
+                                    <Route exact path="/article/:slug" component={ArticleDetail}/>
+                                    <Sidebar/>
+                                </div>
+                            </BrowserRouter>
                         );
                     } else {
                         return <div>Loading</div>
@@ -46,7 +49,7 @@ class Home extends React.Component {
                 }}
             />
         )
-    }
+    };
 }
 
 

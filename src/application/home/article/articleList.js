@@ -8,13 +8,15 @@ import ArticleItem from './articleItem'
 class ArticleList extends React.Component {
     constructor(props) {
         super(props);
-        this.articles = props.articles;
+        this.state = {
+            articles: props.articles
+        };
     }
 
     render() {
         return (
             <div>
-                {this.articles.map((article) => <ArticleItem key={article.__id} data={article}/>)}
+                {this.state.articles.map((article) => <ArticleItem key={article.__id} data={article}/>)}
             </div>
         )
     }
