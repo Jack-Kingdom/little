@@ -45,6 +45,7 @@
     "webpack-dev-server": "^2.6.1"
   },
   "devDependencies": {
+    "compression-webpack-plugin": "^1.0.0",
     "eslint": "^4.3.0"
   }
 }

@@ -1,6 +1,8 @@
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+"use strict";
+
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 let webpackConfig = {
     entry: {
@@ -54,13 +56,17 @@ let webpackConfig = {
         'react': 'React',
         'react-dom': 'ReactDOM',
         'react-router-dom': 'ReactRouterDOM',
-        // 'katex': 'Katex',
+        'katex': 'Katex',
     },
     plugins: [
         // home page
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             filename: 'index.html',
+            minify: {
+                // todo minify html
+                removeComments: true,
+            }
         }),
         // combine css file
         new ExtractTextPlugin("css/[name].css"),
