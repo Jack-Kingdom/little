@@ -8,8 +8,7 @@ import webpackConfig from './webpackConfig';
 // minimize and compress javascript
 webpackConfig.plugins.push(new UglifyJSPlugin());
 
-// compress
-// todo compress resource
+// compress js code with gzip
 webpackConfig.plugins.push(new CompressionPlugin({
     asset: "[path].gz[query]",
     algorithm: "gzip",
