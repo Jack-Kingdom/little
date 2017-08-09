@@ -1,6 +1,8 @@
 "use strict";
 
 import React from 'react';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
+import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay';
 
 class articleDetail extends React.Component {
     constructor(props) {

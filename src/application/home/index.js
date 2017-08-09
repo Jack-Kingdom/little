@@ -37,7 +37,6 @@ class Home extends React.Component {
                             <BrowserRouter>
                                 <div className="home-wrapper">
                                     <Route exact path="/" render={() => (<ArticleList data={props.articles}/>)}/>
-                                    {/*<Route path="/article/:slug" render={() => (<ArticleDetail data={props.articles[0]}/>)}/>*/}
                                     <Route exact path="/article/:slug" component={ArticleDetail}/>
                                     <Sidebar/>
                                 </div>

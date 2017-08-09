@@ -10,12 +10,11 @@ class ArticleList extends React.Component {
         this.state = {
             articles: props.data
         };
-        console.log(props.data);
     }
 
     render() {
         return (
-            <div>
+            <div className="article-list">
                 {this.state.articles.map((article) => (
                     <div key={article.id}>
                         <h1><Link to={'/article/' + article.slug}>{article.title}</Link></h1>
@@ -33,8 +32,8 @@ export default createFragmentContainer(ArticleList,
         fragment articleList on Article @relay(plural: true){
             id
             title
-            content
             slug
+            content
         }`
 )
 
