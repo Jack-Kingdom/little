@@ -17,7 +17,9 @@ class articleDetail extends React.Component {
     render() {
         return (
             <div>
-                This is detail page, slug:{this.state.slug}
+                This is detail page
+                id:{this.state.id}
+                slug:{this.state.slug}
             </div>
         );
     }

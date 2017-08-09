@@ -38,20 +38,14 @@ class Auth extends React.Component {
 
     }
 
-    componentWillMount() {
-        fetch('/api/auth/check-logged')
-            .then((res) => res.json())
-            .then((data) => console.log(data))
-        ;
-    }
-
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Email: <input type="text" name="email" value={this.state.email} onChange={this.handleChange}/>
+                    Email: <input type="text" name="email" value={this.state.email}
+                                  onChange={(e) => this.setState({email: e.target.value})}/>
                     PassWord: <input type="password" name="password" value={this.state.password}
-                                     onChange={this.handleChange}/>
+                                     onChange={(e) => this.setState({password: e.target.value})}/>
                 </label>
                 <input type="submit" value="Submit" onChange={this.handleSubmit}/>
             </form>
