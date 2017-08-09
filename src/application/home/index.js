@@ -21,7 +21,7 @@ class Home extends React.Component {
                     graphql`
                       query homeQuery($sort:String,$limit:Int) {
                         articles(sort:$sort,limit:$limit){
-                            ...articleItem
+                            ...articleList
                         }
                       }`
                 }
@@ -36,7 +36,7 @@ class Home extends React.Component {
                         return (
                             <BrowserRouter>
                                 <div className="home-wrapper">
-                                    <Route exact path="/" render={() => (<ArticleList articles={props.articles}/>)}/>
+                                    <Route exact path="/" render={() => (<ArticleList data={props.articles}/>)}/>
                                     {/*<Route path="/article/:slug" render={() => (<ArticleDetail data={props.articles[0]}/>)}/>*/}
                                     <Route exact path="/article/:slug" component={ArticleDetail}/>
                                     <Sidebar/>

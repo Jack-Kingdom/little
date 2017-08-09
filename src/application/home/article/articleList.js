@@ -1,25 +1,40 @@
-/**
- * Created by Jack on 4/4/2017.
- */
+"use strict";
 
 import React from 'react';
-import ArticleItem from './articleItem'
+import {BrowserRouter, Route, Link} from 'react-router-dom';
+import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay';
 
 class ArticleList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            articles: props.articles
+            articles: props.data
         };
+        console.log(props.data);
     }
 
     render() {
         return (
             <div>
-                {this.state.articles.map((article) => <ArticleItem key={article.__id} data={article}/>)}
+                {this.state.articles.map((article) => (
+                    <div key={article.id}>
+                        <h1><Link to={'/article/' + article.slug}>{article.title}</Link></h1>
+                        <p>{article.content}</p>
+                    </div>
+                ))}
             </div>
         )
     }
 }
 
-export default ArticleList;
+
+export default createFragmentContainer(ArticleList,
+    graphql`
+        fragment articleList on Article @relay(plural: true){
+            id
+            title
+            content
+            slug
+        }`
+)
+
