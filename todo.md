@@ -1,3 +1,4 @@
-1. render article detail page
-2. beautify UI
-3. add test framework
+- render article detail page
+- beautify UI
+- add test framework
+- add prompt for edit page

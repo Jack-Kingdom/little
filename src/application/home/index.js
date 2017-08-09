@@ -6,7 +6,6 @@ import {QueryRenderer, graphql} from 'react-relay';
 import modernEnvironment from '../env';
 import Sidebar from './sidebar';
 import ArticleList from './article/articleList';
-import ArticleDetail from './article/articleDetail';
 
 class Home extends React.Component {
     constructor(props) {
@@ -34,13 +33,10 @@ class Home extends React.Component {
                         return <div>{error.message}</div>
                     } else if (props) {
                         return (
-                            <BrowserRouter>
-                                <div className="home-wrapper">
-                                    <Route exact path="/" render={() => (<ArticleList data={props.articles}/>)}/>
-                                    <Route exact path="/article/:slug" component={ArticleDetail}/>
-                                    <Sidebar/>
-                                </div>
-                            </BrowserRouter>
+                            <div className="home-wrapper">
+                                <Route path="/" render={() => (<ArticleList data={props.articles}/>)}/>
+                                <Sidebar/>
+                            </div>
                         );
                     } else {
                         return <div>Loading</div>

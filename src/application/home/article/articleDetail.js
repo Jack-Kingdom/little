@@ -9,7 +9,6 @@ class articleDetail extends React.Component {
         super(props);
 
         this.state = {
-            slug: props.match.params.slug
         };
     }
 
@@ -18,11 +17,19 @@ class articleDetail extends React.Component {
         return (
             <div>
                 This is detail page
-                id:{this.state.id}
-                slug:{this.state.slug}
             </div>
         );
     }
 }
 
-export default articleDetail;
+// export default articleDetail;
+
+export default createFragmentContainer(articleDetail,
+    graphql`
+        fragment articleDetail on Article{
+            id
+            title
+            renderedContent
+        }
+    `
+);
