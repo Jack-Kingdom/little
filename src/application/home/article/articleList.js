@@ -3,6 +3,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay';
+import ArticleDetail from './articleDetail';
 
 class ArticleList extends React.Component {
     constructor(props) {
@@ -17,7 +18,8 @@ class ArticleList extends React.Component {
             <div className="article-list">
                 {this.state.articles.map((article) => (
                     <div key={article.id}>
-                        <h1><Link to="/article">{article.title}</Link></h1>
+                        <h1><Link to={"/article/" + article.slug}>{article.title}</Link></h1>
+                        {/* todo perfect content */}
                         <p>{article.content}</p>
                     </div>
                 ))}
@@ -31,8 +33,8 @@ export default createFragmentContainer(ArticleList,
     graphql`
         fragment articleList on Article @relay(plural: true){
             id
-            title
             slug
+            title
             content
         }
     `
