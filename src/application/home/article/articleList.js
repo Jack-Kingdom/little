@@ -17,7 +17,7 @@ class ArticleList extends React.Component {
             <div className="article-list">
                 {this.state.articles.map((article) => (
                     <div key={article.id}>
-                        <h1><Link to={'/article/' + article.slug}>{article.title}</Link></h1>
+                        <h1><Link to="/article">{article.title}</Link></h1>
                         <p>{article.content}</p>
                     </div>
                 ))}
@@ -34,7 +34,6 @@ export default createFragmentContainer(ArticleList,
             title
             slug
             content
-            ...articleDetail
         }
     `
 )

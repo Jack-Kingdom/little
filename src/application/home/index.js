@@ -36,7 +36,7 @@ class Home extends React.Component {
                         return (
                             <div className="home-wrapper">
                                 <Route exact path="/" render={() => <ArticleList data={props.articles}/>}/>
-                                <Route path="/article/:slug" component={ArticleDetail}/>
+                                <Route exact path="/article" render={() => <ArticleDetail/>}/>
                                 <Sidebar/>
                             </div>
                         );

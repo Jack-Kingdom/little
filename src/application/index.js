@@ -14,8 +14,8 @@ class App extends React.Component {
         return (
             <BrowserRouter>
                 <div className="site-wrapper">
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/admin" component={Admin}/>
+                    <Route path="/" component={Home}/>
+                    <Route path="/admin" component={Admin}/>
                 </div>
             </BrowserRouter>
         )
