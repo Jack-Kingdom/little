@@ -3,7 +3,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay';
-import articleDetail from "./articleDetail";
 
 class ArticleList extends React.Component {
     constructor(props) {
@@ -18,7 +17,6 @@ class ArticleList extends React.Component {
             <div className="article-list">
                 {this.state.articles.map((article) => (
                     <div key={article.id}>
-                        <Route exact path={'/article/' + article.slug} render={() => <articleDetail/>}/>
                         <h1><Link to={'/article/' + article.slug}>{article.title}</Link></h1>
                         <p>{article.content}</p>
                     </div>
