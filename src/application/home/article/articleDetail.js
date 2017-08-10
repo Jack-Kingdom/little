@@ -9,7 +9,9 @@ class ArticleDetail extends React.Component {
     constructor(props) {
         super(props);
 
-        const slug = props.match.params.slug;
+        this.state = {
+            id: props.match.params.id
+        }
 
     }
 
@@ -19,24 +21,26 @@ class ArticleDetail extends React.Component {
                 environment={modernEnvironment}
                 query={
                     graphql`
-                      query articleDetailQuery($slug:String!) {
-                        article(slug:$slug){
-                            ...articleList
+                      query articleDetailQuery($id:ID!) {
+                        article(id:$id){
+                            id
+                            slug
+                            title
+                            renderedContent
                         }
                       }`
                 }
                 variables={{
-                    sort: "updatedAt",
-                    limit: 10,
+                    id: this.state.id,
                 }}
                 render={({error, props}) => {
                     if (error) {
                         return <div>{error.message}</div>
                     } else if (props) {
                         return (
-                            <div className="home-wrapper">
-                                <Route exact path="/" render={() => <ArticleList data={props.articles}/>}/>
-                                <Route path="/article/:slug" component={ArticleDetail}/>
+                            <div className="article-wrapper">
+                                this is detail page
+                                {props.article.slug}
                             </div>
                         );
                     } else {
@@ -47,5 +51,9 @@ class ArticleDetail extends React.Component {
         );
     }
 }
+
+// class XXOO extends QueryRenderer {
+//     constructor(props)
+// }
 
 export default ArticleDetail;
