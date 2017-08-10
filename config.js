@@ -1,7 +1,11 @@
 "use strict";
 
+// todo rewrite config
+
 const config = {
-    // backend listened url, used for api proxy
+
+    title: "To Be Hacker",
+
     backend_url: 'http://localhost:3000',
 };
 

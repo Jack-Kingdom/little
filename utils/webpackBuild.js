@@ -5,6 +5,14 @@ import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 import CompressionPlugin from 'compression-webpack-plugin';
 import webpackConfig from './webpackConfig';
 
+// add externals at productions environment
+webpackConfig.externals = {
+    'react': 'React',
+    'react-dom': 'ReactDOM',
+    'react-router-dom': 'ReactRouterDOM',
+    'katex': 'Katex',
+};
+
 // minimize and compress javascript
 webpackConfig.plugins.push(new UglifyJSPlugin());
 

@@ -26,6 +26,8 @@ class ArticleDetail extends React.Component {
                             id
                             slug
                             title
+                            createdAt
+                            updatedAt
                             renderedContent
                         }
                       }`
@@ -37,10 +39,11 @@ class ArticleDetail extends React.Component {
                     if (error) {
                         return <div>{error.message}</div>
                     } else if (props) {
+                        let article = props.article;
                         return (
                             <div className="article-wrapper">
-                                this is detail page
-                                {props.article.slug}
+                                <h1 style={{}}>{article.title}</h1>
+                                <div>{article.renderedContent}</div>
                             </div>
                         );
                     } else {
