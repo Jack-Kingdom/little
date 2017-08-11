@@ -18,7 +18,7 @@ class ArticleList extends React.Component {
             <div className="article-list">
                 {this.state.articles.map((article) => (
                     <div key={article.id}>
-                        <h1><Link to={"/article/" + article.id}>{article.title}</Link></h1>
+                        <h1><Link to={"/article/" + article.slug}>{article.title}</Link></h1>
                         {/* todo perfect content */}
                         <p>{article.content}</p>
                     </div>
