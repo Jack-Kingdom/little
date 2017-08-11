@@ -55,14 +55,17 @@ let webpackConfig = {
         },
         plugins: [
             // inject build file to html
-            new HtmlWebpackPlugin(Object.assign(config, {
+            new HtmlWebpackPlugin({
                 template: 'src/index.html',
                 filename: 'index.html',
                 minify: {
                     // todo minify html
                     removeComments: true,
-                }
-            })),
+                },
+                // template variable
+                debug:true
+            }),
+
             // combine css file
             new ExtractTextPlugin("css/[name].css"),
         ]

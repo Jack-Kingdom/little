@@ -10,7 +10,7 @@ class ArticleDetail extends React.Component {
         super(props);
 
         this.state = {
-            slug: props.match.params.slug
+            id: props.match.params.id
         }
 
     }
@@ -21,8 +21,8 @@ class ArticleDetail extends React.Component {
                 environment={modernEnvironment}
                 query={
                     graphql`
-                      query articleDetailQuery($slug:String!) {
-                        article(slug:$slug){
+                      query articleDetailQuery($id:ID!) {
+                        article(id:$id){
                             id
                             slug
                             title
@@ -33,7 +33,7 @@ class ArticleDetail extends React.Component {
                       }`
                 }
                 variables={{
-                    slug: this.state.slug,
+                    id: this.state.id,
                 }}
                 render={({error, props}) => {
                     if (error) {

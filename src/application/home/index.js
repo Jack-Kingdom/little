@@ -19,14 +19,15 @@ class Home extends React.Component {
                 environment={modernEnvironment}
                 query={
                     graphql`
-                      query homeQuery($sort:String,$limit:Int) {
-                        articles(sort:$sort,limit:$limit){
+                      query homeQuery($order:String,$offset:Int,$limit:Int) {
+                        articles(order:$order,offset:$offset,limit:$limit){
                             ...articleList
                         }
                       }`
                 }
                 variables={{
-                    sort: "updatedAt",
+                    order: "updatedAt",
+                    offset: 0,
                     limit: 10,
                 }}
                 render={({error, props}) => {
@@ -36,7 +37,7 @@ class Home extends React.Component {
                         return (
                             <div className="home-wrapper">
                                 <Route exact path="/" render={() => <ArticleList data={props.articles}/>}/>
-                                <Route path="/article/:slug" component={ArticleDetail}/>
+                                <Route path="/article/:id" component={ArticleDetail}/>
                                 <Sidebar/>
                             </div>
                         );
