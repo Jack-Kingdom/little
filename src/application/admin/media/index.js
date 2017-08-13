@@ -13,7 +13,7 @@ class Media extends React.Component {
                 <input type="file" name="media"/>
                 <input type="submit" value="Upload"/>
             </form>
-        )
+        );
     }
 }
 

@@ -32,7 +32,7 @@ class Home extends React.Component {
                 }}
                 render={({error, props}) => {
                     if (error) {
-                        return <div>{error.message}</div>
+                        return <div>{error.message}</div>;
                     } else if (props) {
                         return (
                             <div className="home-wrapper">
@@ -42,11 +42,11 @@ class Home extends React.Component {
                             </div>
                         );
                     } else {
-                        return <div>Loading</div>
+                        return <div>Loading</div>;
                     }
                 }}
             />
-        )
+        );
     };
 }
 

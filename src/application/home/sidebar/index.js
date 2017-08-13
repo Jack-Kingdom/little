@@ -3,25 +3,21 @@
  */
 
 import React from 'react';
-import {Route, Link} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom';
 
 class Sidebar extends React.Component {
-
     constructor(props) {
         super(props);
 
         this.state = {
             displayStatus: 'hide',
-        }
+        };
     }
 
     render() {
         return (
             <div className="sidebar-container">
-
                 <div className="sidebar-profile">
-                    {/*<img className="sidebar-profile-picture" src={require('./img/profile-picture.jpg')}*/}
-                    {/*alt="author's picture"/>*/}
                     <h4 className="sidebar-profile-name">Jack King</h4>
                     <h5 className="sidebar-profile-bio">Software developer</h5>
                 </div>
@@ -35,7 +31,7 @@ class Sidebar extends React.Component {
                     <li><Link to="/admin">Admin</Link></li>
                 </ul>
             </div>
-        )
+        );
     }
 }
 

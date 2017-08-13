@@ -24,7 +24,7 @@ class ArticleList extends React.Component {
                     </div>
                 ))}
             </div>
-        )
+        );
     }
 }
 
@@ -38,5 +38,5 @@ export default createFragmentContainer(ArticleList,
             content
         }
     `
-)
+);
 

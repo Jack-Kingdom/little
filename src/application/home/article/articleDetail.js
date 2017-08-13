@@ -11,7 +11,7 @@ class ArticleDetail extends React.Component {
 
         this.state = {
             id: props.match.params.id
-        }
+        };
 
     }
 
@@ -37,7 +37,7 @@ class ArticleDetail extends React.Component {
                 }}
                 render={({error, props}) => {
                     if (error) {
-                        return <div>{error.message}</div>
+                        return <div>{error.message}</div>;
                     } else if (props) {
                         let article = props.article;
                         return (
@@ -47,7 +47,7 @@ class ArticleDetail extends React.Component {
                             </div>
                         );
                     } else {
-                        return <div>Loading</div>
+                        return <div>Loading</div>;
                     }
                 }}
             />

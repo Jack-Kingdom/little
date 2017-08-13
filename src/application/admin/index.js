@@ -12,7 +12,7 @@ class Admin extends React.Component {
             <div className="admin-wrapper">
                 <Auth/>
             </div>
-        )
+        );
     }
 }
 

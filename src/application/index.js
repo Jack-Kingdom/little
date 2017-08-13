@@ -7,7 +7,7 @@ import Admin from './admin';
 
 class App extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
 
     render() {
@@ -18,7 +18,7 @@ class App extends React.Component {
                     <Route path="/admin" component={Admin}/>
                 </div>
             </BrowserRouter>
-        )
+        );
     }
 }
 

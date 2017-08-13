@@ -10,7 +10,7 @@ let webpackConfig = {
             app: ['./src/entry.js']
         },
         output: {
-            path: path.join(__dirname, '../build'),
+            path: path.join(__dirname, '../dist'),
             filename: "js/bundle.js",
             publicPath: "/"
         },
@@ -67,7 +67,7 @@ let webpackConfig = {
             }),
 
             // combine css file
-            new ExtractTextPlugin("css/[name].css"),
+            // new ExtractTextPlugin("css/[name].css"),
         ]
     }
 ;
