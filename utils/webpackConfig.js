@@ -25,6 +25,7 @@ let webpackConfig = {
             loaders: [
                 {
                     test: /\.js$/,
+                    exclude: path.join(__dirname, "../node_modules"),
                     loader: "babel-loader",
                 },
                 {
@@ -63,7 +64,7 @@ let webpackConfig = {
                     removeComments: true,
                 },
                 // template variable
-                debug:true
+                debug: true
             }),
 
             // combine css file
