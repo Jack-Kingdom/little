@@ -15,9 +15,10 @@ function fetchQuery(operation, variables) {
     });
 }
 
-const modernEnvironment = new Environment({
-    network: Network.create(fetchQuery),
-    store: new Store(new RecordSource()),
-});
+// todo add more function here
+let _store = new Store(new RecordSource());
 
-export default modernEnvironment;
+export default new Environment({
+    network: Network.create(fetchQuery),
+    store: _store
+});
