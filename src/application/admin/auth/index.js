@@ -1,9 +1,8 @@
 "use strict";
 
 import React from 'react';
-import moment from 'moment';
+import Button from 'material-ui/Button';
 
-moment.locale('en');
 
 class Auth extends React.Component {
     constructor(props) {
@@ -51,10 +50,7 @@ class Auth extends React.Component {
                                      onChange={(e) => this.setState({password: e.target.value})}/>
                 </label>
                 <input type="submit" value="Submit" onChange={this.handleSubmit}/>
-                <div>
-                    <p className="version">antd version: {version}</p>
-                    <DatePicker defaultValue={moment()}/>
-                </div>
+                <Button>hello world</Button>
             </form>
         );
     }
