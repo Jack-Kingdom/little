@@ -10,6 +10,7 @@
     "build": "babel-node  utils/webpackBuild.js",
     "update-schema": "babel-node utils/updateSchema.js",
     "relay": "relay-compiler --src ./src --schema ./graphql.schema.json --watch",
+    "clean":"rm -rf dist && mkdir dist",
     "standard": "standard --fix"
   },
   "pre-commit": [
