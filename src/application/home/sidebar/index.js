@@ -1,13 +1,14 @@
 
 import React from 'react'
 import {Link} from 'react-router-dom'
+// import List from 'material-ui'
 
 class Sidebar extends React.Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      displayStatus: 'hide'
+      display: true
     }
   }
 
@@ -27,6 +28,7 @@ class Sidebar extends React.Component {
           <li><Link to='/about'>About</Link></li>
           <li><Link to='/admin'>Admin</Link></li>
         </ul>
+        {/* <List/> */}
       </div>
     )
   }
