@@ -1,9 +1,6 @@
-/**
- * Created by Jack on 4/3/2017.
- */
 
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 class Sidebar extends React.Component {
   constructor (props) {

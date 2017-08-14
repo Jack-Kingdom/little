@@ -15,6 +15,11 @@
   "pre-commit": [
     "standard"
   ],
+  "standard": {
+    "global": [
+      "fetch"
+    ]
+  },
   "dependencies": {
     "graphql": "^0.10.5",
     "katex": "^0.7.1",

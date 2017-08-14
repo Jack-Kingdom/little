@@ -1,8 +1,5 @@
-'use strict'
-
 import React from 'react'
-import {BrowserRouter, Route, Link} from 'react-router-dom'
-import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay'
+import { QueryRenderer, graphql } from 'react-relay'
 import modernEnvironment from '../../env'
 
 class ArticleDetail extends React.Component {
@@ -19,7 +16,7 @@ class ArticleDetail extends React.Component {
       <QueryRenderer
         environment={modernEnvironment}
         query={
-                    graphql`
+          graphql`
                       query articleDetailQuery($id:ID!) {
                         article(id:$id){
                             id
@@ -30,7 +27,7 @@ class ArticleDetail extends React.Component {
                             renderedContent
                         }
                       }`
-                }
+        }
         variables={{
           id: this.state.id
         }}
@@ -49,7 +46,7 @@ class ArticleDetail extends React.Component {
             return <div>Loading</div>
           }
         }}
-            />
+      />
     )
   }
 }

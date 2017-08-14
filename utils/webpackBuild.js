@@ -1,4 +1,3 @@
-'use strict'
 
 import webpack from 'webpack'
 import UglifyJSPlugin from 'uglifyjs-webpack-plugin'

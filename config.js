@@ -1,4 +1,3 @@
-'use strict'
 
 // todo rewrite config
 

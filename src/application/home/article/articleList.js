@@ -1,9 +1,6 @@
-'use strict'
-
 import React from 'react'
-import {BrowserRouter, Route, Link} from 'react-router-dom'
-import Relay, {QueryRenderer, graphql, createFragmentContainer} from 'react-relay'
-import ArticleDetail from './articleDetail'
+import { Link } from 'react-router-dom'
+import { graphql, createFragmentContainer } from 'react-relay'
 
 class ArticleList extends React.Component {
   constructor (props) {
@@ -22,19 +19,19 @@ class ArticleList extends React.Component {
             {/* todo perfect content */}
             <p>{article.content}</p>
           </div>
-                ))}
+        ))}
       </div>
     )
   }
 }
 
 export default createFragmentContainer(ArticleList,
-    graphql`
-        fragment articleList on Article @relay(plural: true){
-            id
-            slug
-            title
-            content
-        }
-    `
+  graphql`
+      fragment articleList on Article @relay(plural: true){
+          id
+          slug
+          title
+          content
+      }
+  `
 )

@@ -1,5 +1,1 @@
-TODO List:
-1. mongoose unique not working
-
-FAQ:
-1. how get graphql schema
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)

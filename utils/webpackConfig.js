@@ -1,9 +1,6 @@
-'use strict'
-
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import config from '../config'
 
 let webpackConfig = {
   entry: {
@@ -37,7 +34,7 @@ let webpackConfig = {
       },
       {
         test: /\.less$/,
-                    // loader:  "styles-loader!css-loader!less-loader"
+        // loader:  "styles-loader!css-loader!less-loader"
         loader: ExtractTextPlugin.extract({
           fallback: 'styles-loader',
           use: 'css-loader!less-loader'
@@ -55,20 +52,20 @@ let webpackConfig = {
     ]
   },
   plugins: [
-            // inject build file to html
+    // inject build file to html
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
       minify: {
-                    // todo minify html
+        // todo minify html
         removeComments: true
       },
-                // template variable
+      // template variable
       debug: true
     })
 
-            // combine css file
-            // new ExtractTextPlugin("css/[name].css"),
+    // combine css file
+    // new ExtractTextPlugin("css/[name].css"),
   ]
 }
 

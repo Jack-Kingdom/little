@@ -1,30 +1,24 @@
-'use strict'
-
 import React from 'react'
-import {BrowserRouter, Route, Link} from 'react-router-dom'
-import {QueryRenderer, graphql} from 'react-relay'
+import { Route } from 'react-router-dom'
+import { QueryRenderer, graphql } from 'react-relay'
 import modernEnvironment from '../env'
 import Sidebar from './sidebar'
 import ArticleList from './article/articleList'
 import ArticleDetail from './article/articleDetail'
 
 class Home extends React.Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <QueryRenderer
         environment={modernEnvironment}
         query={
-                    graphql`
+          graphql`
                       query homeQuery($order:String,$offset:Int,$limit:Int) {
                         articles(order:$order,offset:$offset,limit:$limit){
                             ...articleList
                         }
                       }`
-                }
+        }
         variables={{
           order: 'updatedAt',
           offset: 0,
@@ -45,7 +39,7 @@ class Home extends React.Component {
             return <div>Loading</div>
           }
         }}
-            />
+      />
     )
   };
 }
