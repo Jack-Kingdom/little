@@ -15,4 +15,4 @@ __generated__
 graphql.schema.json
 
 # build folder
-build
+dist
