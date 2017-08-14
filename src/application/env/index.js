@@ -1,24 +1,24 @@
-import {Environment, Network, RecordSource, Store,} from 'relay-runtime';
+import {Environment, Network, RecordSource, Store} from 'relay-runtime'
 
-function fetchQuery(operation, variables) {
-    return fetch('/api/graphql', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            query: operation.text,
-            variables,
-        }),
-    }).then(response => {
-        return response.json();
-    });
+function fetchQuery (operation, variables) {
+  return fetch('/api/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      query: operation.text,
+      variables
+    })
+  }).then(response => {
+    return response.json()
+  })
 }
 
 // todo add more function here
-let _store = new Store(new RecordSource());
+let _store = new Store(new RecordSource())
 
 export default new Environment({
-    network: Network.create(fetchQuery),
-    store: _store
-});
+  network: Network.create(fetchQuery),
+  store: _store
+})

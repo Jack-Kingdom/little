@@ -3,8 +3,8 @@
  */
 
 let styles = {
-    base: require('./base'),
-    editor: require('./editor')
-};
+  base: require('./base'),
+  editor: require('./editor')
+}
 
-export default styles;
+export default styles

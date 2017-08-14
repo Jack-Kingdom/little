@@ -1,26 +1,26 @@
-"use strict";
+'use strict'
 import webpack from 'webpack'
 import WebpackDevServer from 'webpack-dev-server'
 import webpackConfig from './webpackConfig'
 import config from '../config'
 
 // add hot reload support
-webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/');
+webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/')
 // add source map support
-webpackConfig.devtool = 'inline-source-map';
+webpackConfig.devtool = 'inline-source-map'
 
 const options = {
-    proxy: {
-        "/api/*": config.backend_url,
-    },
-    watchOptions: {
-        aggregateTimeout: 300,
-        poll: 1000
-    },
-    historyApiFallback:true
-};
+  proxy: {
+    '/api/*': config.backend_url
+  },
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  },
+  historyApiFallback: true
+}
 
-const server = new WebpackDevServer(webpack(webpackConfig), options);
+const server = new WebpackDevServer(webpack(webpackConfig), options)
 server.listen(webpackConfig.devServer.port, 'localhost', (err) => {
-    if (err) throw err;
-});
+  if (err) throw err
+})

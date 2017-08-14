@@ -2,13 +2,13 @@
  * Created by Jack on 3/31/2017.
  */
 
-"use strict";
+'use strict'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './application';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './application'
 
 ReactDOM.render(
-    <App/>,
+  <App />,
     document.getElementById('app')
-);
+)

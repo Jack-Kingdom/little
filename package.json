@@ -10,10 +10,10 @@
     "build": "babel-node  utils/webpackBuild.js",
     "update-schema": "babel-node utils/updateSchema.js",
     "relay": "relay-compiler --src ./src --schema ./graphql.schema.json --watch",
-    "eslint": "eslint --ext .js,.jsx src/"
+    "standard": "standard --fix"
   },
   "pre-commit": [
-    "eslint"
+    "standard"
   ],
   "dependencies": {
     "graphql": "^0.10.5",
@@ -49,6 +49,7 @@
     "pre-commit": "^1.2.2",
     "relay-compiler": "^1.1.0",
     "relay-runtime": "^1.1.0",
+    "standard": "^10.0.3",
     "style-loader": "^0.16.1",
     "uglify-js": "^2.8.29",
     "uglifyjs-webpack-plugin": "^0.4.6",

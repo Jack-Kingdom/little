@@ -1,12 +1,12 @@
-"use strict";
+'use strict'
 
 // todo rewrite config
 
 const config = {
 
-    title: "To Be Hacker",
+  title: 'To Be Hacker',
 
-    backend_url: 'http://localhost:3000',
-};
+  backend_url: 'http://localhost:3000'
+}
 
-export default config;
+export default config
