@@ -1,6 +1,5 @@
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 let webpackConfig = {
   entry: {
@@ -28,18 +27,10 @@ let webpackConfig = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'styles-loader',
-          use: 'css-loader'
-        })
-      },
-      {
-        test: /\.less$/,
-        // loader:  "styles-loader!css-loader!less-loader"
-        loader: ExtractTextPlugin.extract({
-          fallback: 'styles-loader',
-          use: 'css-loader!less-loader'
-        })
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'}
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -61,9 +52,7 @@ let webpackConfig = {
       minify: {
         // todo minify html
         removeComments: true
-      },
-      // template variable
-      debug: true
+      }
     }),
     new HtmlWebpackPlugin({
       template: 'src/admin/index.html',
@@ -72,13 +61,8 @@ let webpackConfig = {
       minify: {
         // todo minify html
         removeComments: true
-      },
-      // template variable
-      debug: true
+      }
     })
-
-    // combine css file
-    // new ExtractTextPlugin("css/[name].css"),
   ]
 }
 

@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
 
-    <% if(!htmlWebpackPlugin.options.debug){ %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-    <% } %>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-<!--todo remote above two css, combine in css-->
 
 </head>
 <body>
 
 <div id="app"></div>
 
-<% if(!htmlWebpackPlugin.options.debug){ %>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
 <script src="https://cdn.jsdelivr.net/react/15.5.4/react-dom.min.js"></script>
 <script src="https://unpkg.com/react-router-dom@4.1.2/umd/react-router-dom.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-<% } %>
 
 </body>
 </html>

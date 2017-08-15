@@ -32,9 +32,9 @@ class Home extends React.Component {
             return (
               <BrowserRouter>
                 <div className='home-wrapper'>
-                  <Route exact path='/' render={() => <ArticleList data={props.articles}/>}/>
-                  <Route path='/article/:id' component={ArticleDetail}/>
-                  <Sidebar/>
+                  <Route exact path='/' render={() => <ArticleList data={props.articles} />} />
+                  <Route path='/article/:id' component={ArticleDetail} />
+                  <Sidebar />
                 </div>
               </BrowserRouter>
 
@@ -49,7 +49,6 @@ class Home extends React.Component {
 }
 
 ReactDOM.render(
-  <Home/>,
+  <Home />,
   document.getElementById('app')
 )
-

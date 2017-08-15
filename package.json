@@ -22,16 +22,15 @@
     ]
   },
   "dependencies": {
+    "antd": "^2.12.6",
     "graphql": "^0.10.5",
     "katex": "^0.7.1",
     "markdown-it": "^8.3.2",
-    "material-ui": "next",
     "moment": "^2.18.1",
     "react": "next",
     "react-dom": "next",
     "react-relay": "^1.1.0",
-    "react-router-dom": "^4.1.2",
-    "typeface-roboto": "^0.0.35"
+    "react-router-dom": "^4.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

@@ -6,13 +6,13 @@ class Admin extends React.Component {
   render () {
     return (
       <div className='admin-wrapper'>
-        <Auth/>
+        <Auth />
       </div>
     )
   }
 }
 
 ReactDOM.render(
-  <Admin/>,
+  <Admin />,
   document.getElementById('app')
 )

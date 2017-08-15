@@ -1,7 +1,5 @@
-'use strict'
-
 import React from 'react'
-import Button from 'material-ui/Button'
+import { Button } from 'antd'
 
 class Auth extends React.Component {
   constructor (props) {
@@ -33,19 +31,19 @@ class Auth extends React.Component {
       method: 'post',
       body: data
     })
-            .then((res) => res.json())
-            .then((data) => console.log(data))
-            .catch((err) => console.log(err))
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err))
   }
 
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-                    Email: <input type='text' name='email' value={this.state.email}
-                      onChange={(e) => this.setState({email: e.target.value})} />
-                    PassWord: <input type='password' name='password' value={this.state.password}
-                      onChange={(e) => this.setState({password: e.target.value})} />
+          Email: <input type='text' name='email' value={this.state.email}
+            onChange={(e) => this.setState({email: e.target.value})} />
+          PassWord: <input type='password' name='password' value={this.state.password}
+            onChange={(e) => this.setState({password: e.target.value})} />
         </label>
         <input type='submit' value='Submit' onChange={this.handleSubmit} />
         <Button>hello world</Button>

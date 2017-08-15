@@ -2,5 +2,6 @@
 - beautify UI
 - add test framework
 - add prompt for edit page
-- separate home and admin
-- config set different environment
+- ~~separate home and admin~~
+- ~~config set different environment~~
+- add ant design ui

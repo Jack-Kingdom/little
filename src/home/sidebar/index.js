@@ -1,6 +1,6 @@
-
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 // import List from 'material-ui'
 
 class Sidebar extends React.Component {
@@ -26,7 +26,7 @@ class Sidebar extends React.Component {
           <li><Link to='/archives'>Archives</Link></li>
           <li><Link to='/search'>Search</Link></li>
           <li><Link to='/about'>About</Link></li>
-          <li><Link to='/admin'>Admin</Link></li>
+          <li><a href='/admin'>Admin</a></li>
         </ul>
         {/* <List/> */}
       </div>
