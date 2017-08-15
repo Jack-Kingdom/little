@@ -1,16 +1,18 @@
-'use strict'
-
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Auth from './auth'
 
 class Admin extends React.Component {
   render () {
     return (
       <div className='admin-wrapper'>
-        <Auth />
+        <Auth/>
       </div>
     )
   }
 }
 
-export default Admin
+ReactDOM.render(
+  <Admin/>,
+  document.getElementById('app')
+)

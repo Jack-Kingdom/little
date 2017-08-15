@@ -4,7 +4,8 @@ import webpackConfig from './webpackConfig'
 import config from '../config'
 
 // add hot reload support
-webpackConfig.entry.app.unshift('webpack-dev-server/client?http://localhost:8080/')
+webpackConfig.entry.home.unshift(`webpack-dev-server/client?http://localhost:${webpackConfig.devServer.port}`)
+webpackConfig.entry.admin.unshift(`webpack-dev-server/client?http://localhost:${webpackConfig.devServer.port}`)
 // add source map support
 webpackConfig.devtool = 'inline-source-map'
 
@@ -16,7 +17,12 @@ const options = {
     aggregateTimeout: 300,
     poll: 1000
   },
-  historyApiFallback: true
+  historyApiFallback: {
+    rewrites: [
+      {from: /^\/$/, to: '/home.html'},
+      {from: /^\/admin$/, to: '/admin.html'}
+    ]
+  }
 }
 
 const server = new WebpackDevServer(webpack(webpackConfig), options)

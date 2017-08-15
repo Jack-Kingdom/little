@@ -1,6 +1,6 @@
 import React from 'react'
 import { QueryRenderer, graphql } from 'react-relay'
-import modernEnvironment from '../../env'
+import modernEnvironment from '../../env/index'
 
 class ArticleDetail extends React.Component {
   constructor (props) {

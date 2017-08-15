@@ -4,11 +4,12 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 let webpackConfig = {
   entry: {
-    app: ['./src/entry.js']
+    home: ['./src/home/index.js'],
+    admin: ['./src/admin/index.js']
   },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: 'js/bundle.js',
+    filename: 'js/[name].js',
     publicPath: '/'
   },
   devServer: {
@@ -54,8 +55,20 @@ let webpackConfig = {
   plugins: [
     // inject build file to html
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      filename: 'index.html',
+      template: 'src/home/index.html',
+      chunks: ['home'],
+      filename: 'home.html',
+      minify: {
+        // todo minify html
+        removeComments: true
+      },
+      // template variable
+      debug: true
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/admin/index.html',
+      chunks: ['admin'],
+      filename: 'admin.html',
       minify: {
         // todo minify html
         removeComments: true

@@ -10,7 +10,7 @@
     "build": "relay-compiler --src ./src --schema ./graphql.schema.json && babel-node  utils/webpackBuild.js",
     "update-schema": "babel-node utils/updateSchema.js",
     "relay": "relay-compiler --src ./src --schema ./graphql.schema.json --watch",
-    "clean":"rm -rf dist && mkdir dist",
+    "clean": "rm -rf dist && mkdir dist",
     "standard": "standard --fix"
   },
   "pre-commit": [
@@ -45,6 +45,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
     "compression-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "fetch-graphql-schema": "^0.2.1",
