@@ -15,7 +15,7 @@ class Editor extends React.Component {
   render () {
     return (
       <div className='editor-container'>
-        <CustomEditor/>
+        <CustomEditor />
         <p>hello world</p>
       </div>
     )

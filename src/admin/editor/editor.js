@@ -21,7 +21,7 @@ class CustomEditor extends React.Component {
 
   render () {
     return (
-      <Editor editorState={this.state.editorState} handleKeyCommand={this.handleKeyCommand} onChange={this.onChange}/>
+      <Editor editorState={this.state.editorState} handleKeyCommand={this.handleKeyCommand} onChange={this.onChange} />
     )
   }
 }
