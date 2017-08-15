@@ -1,7 +1,5 @@
-'use strict'
-
 import React from 'react'
-
+import CustomEditor from './editor'
 // import Katex from 'katex'
 
 class Editor extends React.Component {
@@ -17,9 +15,8 @@ class Editor extends React.Component {
   render () {
     return (
       <div className='editor-container'>
-        <input id='article-title'
-          placeholder="Article's title here" value={this.state.title} />
-        <textarea ref='editor' id='article-content'>{this.state.content}</textarea>
+        <CustomEditor/>
+        <p>hello world</p>
       </div>
     )
   }
