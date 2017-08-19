@@ -13,9 +13,6 @@
     "clean": "rm -rf dist && mkdir dist",
     "standard": "standard --fix"
   },
-  "pre-commit": [
-    "standard"
-  ],
   "standard": {
     "global": [
       "fetch"
@@ -41,19 +38,17 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-import": "^1.3.1",
     "babel-plugin-relay": "^1.1.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
     "compression-webpack-plugin": "^1.0.0",
-    "cross-env": "^5.0.5",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "fetch-graphql-schema": "^0.2.1",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
     "nodemon": "^1.11.0",
-    "pre-commit": "^1.2.2",
     "relay-compiler": "^1.1.0",
     "relay-runtime": "^1.1.0",
     "standard": "^10.0.3",
