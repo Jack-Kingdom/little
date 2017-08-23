@@ -1,7 +1,7 @@
 {
-  "name": "ownblog",
-  "version": "0.0.1",
-  "description": "my own blog app",
+  "name": "Hacker",
+  "version": "0.1.0",
+  "description": "A SPA frontend of Rose.",
   "author": "Jack",
   "email": "email@qiaohong.org",
   "license": "MIT",
