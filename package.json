@@ -19,7 +19,6 @@
     ]
   },
   "dependencies": {
-    "antd": "^2.12.6",
     "draft-js": "^0.10.1",
     "graphql": "^0.10.5",
     "katex": "^0.7.1",
