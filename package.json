@@ -6,7 +6,7 @@
   "email": "email@qiaohong.org",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --watch utils/webpackDev.js --exec babel-node utils/webpackDev.js",
+    "dev": "nodemon --watch utils/webpackDev.js --exec babel-node utils/webpackDev.js",
     "build": "relay-compiler --src ./src --schema ./graphql.schema.json && babel-node  utils/webpackBuild.js",
     "update-schema": "babel-node utils/updateSchema.js",
     "relay": "relay-compiler --src ./src --schema ./graphql.schema.json --watch",
