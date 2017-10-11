@@ -1,7 +1,7 @@
 {
-  "name": "ownblog",
-  "version": "0.0.1",
-  "description": "my own blog app",
+  "name": "Little",
+  "description": "Frontend of Rose. Powered by React and GraphQL.",
+  "version": "0.0.3",
   "author": "Jack",
   "email": "email@qiaohong.org",
   "license": "MIT",
