@@ -13,9 +13,6 @@
     "clean": "rm -rf dist && mkdir dist",
     "standard": "standard --fix"
   },
-  "pre-commit": [
-    "standard"
-  ],
   "standard": {
     "global": [
       "fetch"
@@ -53,7 +50,6 @@
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
     "nodemon": "^1.11.0",
-    "pre-commit": "^1.2.2",
     "relay-compiler": "^1.1.0",
     "relay-runtime": "^1.1.0",
     "standard": "^10.0.3",
