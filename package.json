@@ -17,13 +17,6 @@
     ]
   },
   "dependencies": {
-    "draft-js": "^0.10.1",
-    "katex": "^0.7.1",
-    "markdown-it": "^8.3.2",
-    "moment": "^2.18.1",
-    "react-markdown": "^2.5.0",
-    "react-relay": "^1.1.0",
-    "react-router-dom": "^4.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
