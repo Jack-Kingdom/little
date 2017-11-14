@@ -8,12 +8,7 @@ node_modules
 yarn-error.log
 yarn.lock
 npm-debug.log
-
-# relay compiled file
-__generated__
-
-# graphql schema file
-graphql.schema.json
+package-lock.json
 
 # build folder
 dist
